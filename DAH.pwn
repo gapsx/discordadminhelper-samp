@@ -33,6 +33,14 @@ public OnPlayerConnect(playerid)
     DCC_SendChannelMessage(chatlog, string);
     return 1;
 }
+DDCMD:reply(DCC_Channel:channel, DCC_User:AdminName, playerid, params[])
+{
+    new string[256], id, text[512];
+    format(string, sizeof(string), "[ADMIN-REPLY] %s replied your question: %s", GetNickDiscord(AdminName), text);
+    SendClientMessage(id, -1, string);
+    return 0;
+}
+//in game commands
 CMD:question(playerid, params[])
 {
     new string[128], text[128];
@@ -42,13 +50,6 @@ CMD:question(playerid, params[])
     SendClientMessage(playerid, -1, "Your question was sent to all administrators out-game, please wait.");
     DCC_SendChannelMessage(chatquestions, string);
     return 1;
-}
-DDCMD:reply(DCC_Channel:channel, DCC_User:AdminName, playerid, params[])
-{
-    new string[256], id, text[512];
-    format(string, sizeof(string), "[ADMIN-REPLY] %s replied your question: %s", GetNickDiscord(AdminName), text);
-    SendClientMessage(id, -1, string);
-    return 0;
 }
 CMD:report(playerid, params[])
 {
