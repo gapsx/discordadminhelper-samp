@@ -5,9 +5,9 @@
 #include            <discord-cmd>
 #include            <sscanf2>
 //================ put here ur chat id's ==================//
-#define             d_chatlog           "730270219905400837" 
-#define             d_chatreports       "731543345570119680"
-#define             d_chatquestions     "731543411320160439"
+#define             d_chatlog           "idhere" 
+#define             d_chatreports       "idhere"
+#define             d_chatquestions     "idhere"
 //=========================================================//
 new playername[MAX_PLAYER_NAME];
 new idname[MAX_PLAYER_NAME];
